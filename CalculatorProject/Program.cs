@@ -1,6 +1,8 @@
 ﻿using System.Text.RegularExpressions;
+using CalculatorLibrary;
 
-namespace CalculatorProject
+// Rename to CalculatorProgram from CalculatorProject
+namespace CalculatorProgram
 {
 	class Program
 	{
@@ -10,6 +12,8 @@ namespace CalculatorProject
 			// Display title as the C# console calculator app.
 			Console.WriteLine("Console Calculator in C#\r");
 			Console.WriteLine("------------------------\n");
+
+			Calculator calculator = new Calculator();
 
 			while (!endApp)
 			{
@@ -60,7 +64,9 @@ namespace CalculatorProject
 				{
 					try
 					{
-						result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
+						// If not using "using CalculatorLibrary;"
+						// Can use "result = CalculatorLibrary.Calculator.DoOperation(cleanNum1, cleanNum2, op);"
+						result = calculator.DoOperation(cleanNum1, cleanNum2, op);
 						if (double.IsNaN(result))
 						{
 							Console.WriteLine("This operation will result in a mathematical error.\n");
