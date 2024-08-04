@@ -50,6 +50,10 @@ namespace CalculatorLibrary
 					}
 					writer.WriteValue("Divide");
 					break;
+				case "e":
+					result = Math.Pow(num1, num2); // Exponentiation
+					writer.WriteValue("Exponentiation");
+					break;
 				// Return text for an incorrect option entry.
 				default:
 					break;

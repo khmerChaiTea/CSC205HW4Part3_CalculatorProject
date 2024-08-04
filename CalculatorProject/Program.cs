@@ -51,12 +51,13 @@ namespace CalculatorProgram
 				Console.WriteLine("\ts - Subtract");
 				Console.WriteLine("\tm - Multiply");
 				Console.WriteLine("\td - Divide");
+				Console.WriteLine("\te - Exponentiation"); // New option
 				Console.Write("Your option? ");
 
 				string? op = Console.ReadLine();
 
 				// Validate input is not null, and matches the pattern
-				if (op == null || !Regex.IsMatch(op, "[a|s|m|d]"))
+				if (op == null || !Regex.IsMatch(op, "[a|s|m|d|e]"))
 				{
 					Console.WriteLine("Error: Unrecognized input.");
 				}
